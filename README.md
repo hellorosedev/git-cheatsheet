@@ -468,14 +468,6 @@ Steps:
 `git filter-branch --tree-filter` 
 Git will check each commit out into working directory, run your command, and re-commit
 
-## Rewrite history (Tree Filter)
-**Example**
-| Commands | Function |
-| ------ | ------ |
-| `--tree-filter 'rm -f password.txt'` | Remove "password.txt" from project root |
-| `--tree-filter 'find . -name "*.mp4" -exec rm {} \;'` | Remove video files from any directory |
-| `$ git filter-branch --tree-filter 'rm -f password.txt' -- --all` | Goes through all branches, and removes password.txt|
-
 ## Index Filter
 
 | Commands | Function |
