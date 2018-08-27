@@ -468,11 +468,7 @@ Steps:
 `git filter-branch --tree-filter` 
 Git will check each commit out into working directory, run your command, and re-commit
 
-<<<<<<< HEAD
 ### Rewrite history (Tree Filter)
-=======
-
->>>>>>> 01784c96c2be2c9d48f4afbcc026e6b34e48bce7
 **Example**
 | Commands | Function |
 | ------ | ------ |
