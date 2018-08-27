@@ -468,7 +468,8 @@ Steps:
 `git filter-branch --tree-filter` 
 Git will check each commit out into working directory, run your command, and re-commit
 
-Example:
+
+**Example**
 | Commands | Function |
 | ------ | ------ |
 | `--tree-filter 'rm -f password.txt'` | Remove "password.txt" from project root |
