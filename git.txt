@@ -1,0 +1,273 @@
+#Git Command List
+
+##Git Help
+$ git help
+$ git help config
+
+##Configuration
+$ git config
+$ git config --global user.name "UserName"
+$ git config --global user.email sample@adebugslife.com
+
+###Viewing Global Configurations
+$ git config --global --list
+$ cat ~/.gitconfig
+
+###Viewing Local Configurations
+$ git config --local --list
+$ cat .git/config
+
+###Configuring Line Endings
+$ git config --global core.autocrlf input
+$ git config --global core.autocrlf true
+
+###Configuring Push Default
+$ git config --global push.default simple
+
+###Configuring Pull Default
+$ git config --global pull.rebase true
+
+###Reuse Recorded Resolution (ReReRe)
+$ git config --global rerere.enabled true
+
+###Configuring Output Colors
+$ git config --global color.ui true
+
+###Configuring Aliases
+$ git config --global alias.prettylog \ "log --pretty=format: '%h %s [%an]' --graph"
+$ git config --global alias.mylogs \ "log --graph --decorate --pretty=oneline --abbrev-commit --all"
+
+$ git prettylog
+$ git mylogs
+$ git s
+$ git config --global alias.s "status -s"
+$ git status -s
+
+
+## Starting Repo and Staging
+git init
+git status
+git add sample.txt
+git add sample1.txt sample2.txt
+git add --all
+git add .
+git add *.txt
+git add docs/*.txt
+git add docs/ //Add all files in docs directory
+git add "*.txt" //Add all txt file in the whole project
+
+###Remove Untracked File and Delete from File System
+$ git clean -n
+$ git clean -nd
+$ git clean -f
+$ git clean -fd
+$ git clean -d -f -f
+$ git clean -fx
+$ git clean -fX	
+$ git clean -fdx
+$ git clean -fdxn
+$ git clean -f <file>	
+$ git clean -fxd <dir_path>	
+
+###Add to Staging
+$ git add sample.txt
+$ git add sample1.txt sample2.txt
+$ git add --all
+$ git add .	
+$ git add *.txt	
+$ git add directoryName/*.txt	
+$ git add directoryName/
+
+###Unstaged File
+$ git rm --cached file.txt
+$ git reset HEAD file.txt	
+$ git checkout -- file.txt
+
+##Commit
+$ git commit -m "My first commit"
+$ git commit -a -m "Modified file commit"
+$ git commit -am "Modified file commit"
+
+###Undoing Commit
+$ git reset --soft HEAD^
+$ git reset --hard HEAD^
+$ git reset --hard HEAD^^
+
+##Remote
+$ git remote -v
+$ git remote add <name> <address>
+$ git push -u <name> <branch>
+$ git remote rm <name>
+
+###Pushing to remote
+$ git push -u origin master
+
+###Pull from Remote
+$ git pull
+
+###Clone
+$ git clone https://github.com/accountName/repoName.git
+
+###Removing remote branch
+$ git push origin :myfeature
+$ git branch -d myfeature //FAILED: Must delete local branch manually
+$ git branch -D myfeature //Force removal of remote branch
+
+##Git Remote
+###Create a new repository on the command line
+$ echo "# test" >> README.md
+$ git init
+$ git add README.md
+$ git commit -m "first commit"
+$ git remote add origin https://github.com/adebugslife/test.git
+$ git push -u origin master
+
+###Push an existing repository from the command line
+$ git remote add origin https://github.com/adebugslife/test.git
+$ git push -u origin master
+
+##Heroku Remote
+$ heroku create
+$ git remote -v
+$ git push heroku master
+
+###Remote push branch to Heroku
+$ git branch
+$ git push heroku-staging staging //FAILED: only master branch will be deploy to Heroku
+$ git push heroku-staging staging:master //Will push your branch to Heroku master branch
+
+##Git Log
+$ git config --global color.ui true
+$ git log
+$ git log --pretty=oneline	
+$ git log --pretty=format: "&h %ad- %s [%an]"	
+$ git help log
+$ git log --oneline -p	
+$ git log --oneline --stat
+$ git log --oneline --graph
+
+##Date Ranges
+$ git log --until=1.minute.ago
+$ git log --since=1.day.ago
+$ git log --since=1.hour.ago
+
+##Git Diff
+$ git diff
+$ git diff HEAD
+$ git diff HEAD^
+$ git diff HEAD^^
+$ git diff HEAD~5
+$ git diff <SHA> <SHA>
+$ git diff master <branch>
+$ git diff --staged
+
+##Blame
+$ git blame <fileName> --date short
+
+##Branching Out
+$ git branch
+$ git branch newFeature
+$ git checkout -b newFeature	
+
+###Merge your branch to master
+$ git checkout master
+$ git merge newFeature
+
+###Clean up the Feature branch
+$ git branch -d newFeature
+
+###Non-Fast-Forward
+$ git checkout -b myFeature2
+$ git add .
+$ git commit "My new Feature 2"
+$ git checkout master
+$ git commit -am "Fixing bugs line #53"
+$ git merge newFeature2
+
+##Tagging
+$ git tag
+$ git checkout v0.0.1
+
+###Add new tag
+$ git tag -a v0.0.2 -m "version 0.0.2"
+
+###Push new tags
+$ git push --tags
+
+##Rebase
+$ git rebase
+$ git rebase --continue
+$ git rebase --skip
+$ git rebase --abort
+
+##Interactive Rebase
+git rebase -i HEAD~3
+
+##Purging History
+git filter-branch --tree-filter
+
+##Index Filter
+$ git filter-branch --index-filter <command>
+--index-filter 'rm -f password.txt'
+--index-filter 'git rm --cached --ignore-unmatch password.txt'
+$ git filter-branch --tree-filter 'rm -f password.txt'
+$ git filter-branch -f --tree-filter 'rm -f password.txt'
+
+##Prune empty commits
+$ git filter-branch -f --prune-empty -- --all
+$ git filter-branch --tree-filter 'rm -f password.txt' --prune-empty -- --all
+
+##Line Endings
+$ git config --global core.autocrlf input
+$ git config --global core.autocrlf true
+$ git config core.autcrlf false
+
+##Git attribute file
+*	
+*.html
+text=auto
+text
+text eol=crlf
+text eol=lf	
+binary
+* text=auto
+*.html text
+*.bat eol=crlf
+
+##Cherry-Pick
+$ git checkout <branchWhereYouWantToCopyTheSpecificCommit>
+$ git cherry-pick <sha>
+
+###Edit the cherry-pick commit message
+$ git cherry-pick edit <sha>
+
+###Multiple cherry pick and combine it
+$ git cherry-pick --no-commit <sha1> <sha2>
+$ git commit -m "Combined commit"
+$ git cherry-pick -x <sha>
+$ git cherry-pick --signoff
+
+##Submodules
+$ git submodule add git@example.com:css.git
+
+###How to modify submodules
+$ cd submodule
+$ git checkout master
+$ git status
+$ git commit -am "Update submodule"
+$ git push
+
+##Cloning Projects
+$ git clone git@sample.com:aquarium.git
+$ git submodule init
+$ git submodule update
+$ git merge <sha>
+cd ../
+$ git add.
+$ git commit -am "Parent directory"
+$ git push --recurse-submodules=on-demand
+
+##Reflog
+$ git reflog
+$ git reset -hard <sha> or git reset --hard HEAD@{1}
+$ git log --walk-reflogs
