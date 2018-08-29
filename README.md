@@ -3,7 +3,7 @@ Quick reference/tricks in Git Commands
 
 # Coverage
 
-  - Git Help
+  - [Git Help](https://github.com/adebugslife/git-cheatsheet#git-help)
   - Git Configuration
   - Excluding Files
   - Starting Repository and Staging (Local)
