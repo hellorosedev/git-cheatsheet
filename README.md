@@ -11,7 +11,7 @@ Quick reference/tricks in Git Commands
   - [Add to Staging](https://github.com/adebugslife/git-cheatsheet#add-to-staging)
   - [Commit](https://github.com/adebugslife/git-cheatsheet#commit)
   - [Remote](https://github.com/adebugslife/git-cheatsheet#remote)
-  - [Git Log(https://github.com/adebugslife/git-cheatsheet#git-log)
+  - [Git Log](https://github.com/adebugslife/git-cheatsheet#git-log)
   - [Git Diff](https://github.com/adebugslife/git-cheatsheet#git-diff)
   - [Blame](https://github.com/adebugslife/git-cheatsheet#blame)
   - [Branching Out](https://github.com/adebugslife/git-cheatsheet#branching-out)
