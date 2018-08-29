@@ -4,29 +4,30 @@ Quick reference/tricks in Git Commands
 # Coverage
 
   - [Git Help](https://github.com/adebugslife/git-cheatsheet#git-help)
-  - Git Configuration
-  - Excluding Files
-  - Starting Repository and Staging (Local)
-  - Remove Untracked File and Delete from File System
-  - Commit
-  - Remote
-  - Git Log
-  - Git Diff
-  - Blame
-  - Branching Out
-  - Collaboration
-  - Tagging
-  - Rebase
-  - Interactive Rebase
-  - Purging History
-  - Index Filter
-  - Prune empty commits
-  - Line Endings
-  - Git attribute file
-  - Cherry-Pick
-  - Submodules
-  - Cloning Projects
-  - Reflog
+  - [Git Configuration](https://github.com/adebugslife/git-cheatsheet#git-configuration)
+  - [Excluding Files](https://github.com/adebugslife/git-cheatsheet#excluding-files)
+  - [Starting Repository and Staging (Local)](https://github.com/adebugslife/git-cheatsheet#starting-repository-and-staging-local)
+  - [Remove Untracked File and Delete from File System](https://github.com/adebugslife/git-cheatsheet#remove-untracked-file-and-delete-from-file-system)
+  - [Add to Staging](https://github.com/adebugslife/git-cheatsheet#add-to-staging)
+  - [Commit](https://github.com/adebugslife/git-cheatsheet#commit)
+  - [Remote](https://github.com/adebugslife/git-cheatsheet#remote)
+  - [Git Log(https://github.com/adebugslife/git-cheatsheet#git-log)
+  - [Git Diff](https://github.com/adebugslife/git-cheatsheet#git-diff)
+  - [Blame](https://github.com/adebugslife/git-cheatsheet#blame)
+  - [Branching Out](https://github.com/adebugslife/git-cheatsheet#branching-out)
+  - [Collaboration](https://github.com/adebugslife/git-cheatsheet#collaboration)
+  - [Tagging](https://github.com/adebugslife/git-cheatsheet#tagging)
+  - [Rebase](https://github.com/adebugslife/git-cheatsheet#rebase)
+  - [Interactive Rebase](https://github.com/adebugslife/git-cheatsheet#interactive-rebase)
+  - [Purging History](https://github.com/adebugslife/git-cheatsheet#purging-history)
+  - [Index Filter](https://github.com/adebugslife/git-cheatsheet#index-filter)
+  - [Prune empty commits](https://github.com/adebugslife/git-cheatsheet#prune-empty-commits)
+  - [Line Endings](https://github.com/adebugslife/git-cheatsheet#prune-empty-commits)
+  - [Git attribute file](https://github.com/adebugslife/git-cheatsheet#git-attribute-file)
+  - [Cherry-Pick](https://github.com/adebugslife/git-cheatsheet#git-attribute-file)
+  - [Submodules](https://github.com/adebugslife/git-cheatsheet#submodules)
+  - [Cloning Projects](https://github.com/adebugslife/git-cheatsheet#cloning-projects)
+  - [Reflog](https://github.com/adebugslife/git-cheatsheet#reflog)
   
 
 
@@ -196,11 +197,12 @@ More Info: [Git Clean]
 Note:
 'add' = New remote
 'origin' = Our name for this remote
+
 | Commands | Function |
 | ------ | ------ |
 | `$ git remote -v` | Show remote repositories |
 | `$ git remote add <name> <address>` | Add remote repo |
-| `$ git push -u <name> <branch>` | Push local to remote repo. Note: **-u** means 'no need to specify the branch name to next push'|
+| `$ git push -u <name> <branch>` | Push local to remote repo|
 | `$ git remote rm <name>` | Remove remotes |
 
 ### Pushing to remote
