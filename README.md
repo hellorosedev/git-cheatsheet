@@ -356,20 +356,20 @@ $ git merge newFeature2
 
 ## Collaboration
 **Scenario 1: Working on different file but same remote repo**
--Person1 push to Github person2 wants a copy and the Person2 wants to add some changes
--Person2 `git push` to remote after commited some changes in the clone repo
--Person1 also working on the same repo in his local.
--Person1 `git push` but FAILED
--Person1 should `git pull`
--Person1 then `git push`
+1. Person1 push to Github person2 wants a copy and the Person2 wants to add some changes
+2. Person2 `git push` to remote after commited some changes in the clone repo
+3. Person1 also working on the same repo in his local.
+4. Person1 `git push` but FAILED
+5. Person1 should `git pull`
+6. Person1 then `git push`
 
 **Scenario 2: Working on SAME file and SAME remote repo**
--Person2 commited changes in file.txt and pushed to remote github repo
--Person1 commited changes in file.txt to local repo
--Person1 `git pull`
--CONFLICT in merge
--Person1 should edit the file.txt manually
--Person1 should `git commit -a` to merge commit
+1. Person2 commited changes in file.txt and pushed to remote github repo
+2. Person1 commited changes in file.txt to local repo
+3. Person1 `git pull`
+4. CONFLICT in merge
+5. Person1 should edit the file.txt manually
+6. Person1 should `git commit -a` to merge commit
 
 ### Create a remote branch
 **Scenario: Person1 creates new branch to remote**
