@@ -93,11 +93,26 @@ $ git reset --soft HEAD^
 $ git reset --hard HEAD^
 $ git reset --hard HEAD^^
 
+###Stash
+$ git stash
+$ git stash save "Message"
+$ git stash save -u
+$ git stash create
+$ git stash store
+$ git stash list
+$ git stash pop
+$ git stash drop stash@{0}
+$ git stash apply stash@{0}
+$ git stash clear
+
 ##Remote
 $ git remote -v
 $ git remote add <name> <address>
 $ git push -u <name> <branch>
 $ git remote rm <name>
+
+###Change remote url
+git remote set-url origin https://github.com/accountName/repoName.git
 
 ###Pushing to remote
 $ git push -u origin master

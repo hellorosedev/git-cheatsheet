@@ -193,6 +193,27 @@ More Info: [Git Clean]
 | `$ git reset --hard HEAD^` | Undo last commit and all changes |
 | `$ git reset --hard HEAD^^` | Undo  last 2 commits and all changes |
 
+# Stash
+| Commands | Function |
+| ------ | ------ |
+| `$ git stash` | Temporary save codes |
+| `$ git stash save "Message"` | Temporary save - Codes and add custom message |
+| `$ git stash save -u` | Temporary save - Untracked files |
+| `git stash branch <NAME> stash@{NUMBER}` | Create new branch with latest stash |
+| `$ git stash create` | Create an unreferenced commit, but it won't actually clear the local changes |
+| `$ git stash show` | Summary of diffs |
+| `$ git stash list` | List all stash |
+| `$ git stash pop` | Retrieve latest stash and remove its record|
+| `$ git stash apply stash@{NUMBER}` | Delete specific stash but retain its record |
+| `$ git stash drop stash@{NUMBER}` | Delete specific stash |
+| `$ git stash clear` | Delete all stash |
+
+**Scenario: Need to commit changes but you are in the wrong branch**
+1. `$ git stash save "Message"` to save changes even you are in the wrong branch
+2. `$ git checkout BRANCHNAME`
+3. `$ git stash pop` - to retrieved saved codes (It will delete the stash after retrieval)
+4. `$ git commit -am "Message"`
+
 ## Remote
 Note:
 'add' = New remote
@@ -204,6 +225,11 @@ Note:
 | `$ git remote add <name> <address>` | Add remote repo |
 | `$ git push -u <name> <branch>` | Push local to remote repo|
 | `$ git remote rm <name>` | Remove remotes |
+
+### Change remote url
+```sh
+git remote set-url origin https://github.com/accountName/repoName.git
+```
 
 ### Pushing to remote
 ```sh
