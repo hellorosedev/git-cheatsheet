@@ -3,31 +3,32 @@ Quick reference/tricks in Git Commands
 
 # Coverage
 
-  - [Git Help](https://github.com/adebugslife/git-cheatsheet#git-help)
-  - [Git Configuration](https://github.com/adebugslife/git-cheatsheet#git-configuration)
-  - [Excluding Files](https://github.com/adebugslife/git-cheatsheet#excluding-files)
-  - [Starting Repository and Staging (Local)](https://github.com/adebugslife/git-cheatsheet#starting-repository-and-staging-local)
-  - [Remove Untracked File and Delete from File System](https://github.com/adebugslife/git-cheatsheet#remove-untracked-file-and-delete-from-file-system)
-  - [Add to Staging](https://github.com/adebugslife/git-cheatsheet#add-to-staging)
-  - [Commit](https://github.com/adebugslife/git-cheatsheet#commit)
-  - [Remote](https://github.com/adebugslife/git-cheatsheet#remote)
-  - [Git Log](https://github.com/adebugslife/git-cheatsheet#git-log)
-  - [Git Diff](https://github.com/adebugslife/git-cheatsheet#git-diff)
-  - [Blame](https://github.com/adebugslife/git-cheatsheet#blame)
-  - [Branching Out](https://github.com/adebugslife/git-cheatsheet#branching-out)
-  - [Collaboration](https://github.com/adebugslife/git-cheatsheet#collaboration)
-  - [Tagging](https://github.com/adebugslife/git-cheatsheet#tagging)
-  - [Rebase](https://github.com/adebugslife/git-cheatsheet#rebase)
-  - [Interactive Rebase](https://github.com/adebugslife/git-cheatsheet#interactive-rebase)
-  - [Purging History](https://github.com/adebugslife/git-cheatsheet#purging-history)
-  - [Index Filter](https://github.com/adebugslife/git-cheatsheet#index-filter)
-  - [Prune empty commits](https://github.com/adebugslife/git-cheatsheet#prune-empty-commits)
-  - [Line Endings](https://github.com/adebugslife/git-cheatsheet#prune-empty-commits)
-  - [Git attribute file](https://github.com/adebugslife/git-cheatsheet#git-attribute-file)
-  - [Cherry-Pick](https://github.com/adebugslife/git-cheatsheet#git-attribute-file)
-  - [Submodules](https://github.com/adebugslife/git-cheatsheet#submodules)
-  - [Cloning Projects](https://github.com/adebugslife/git-cheatsheet#cloning-projects)
-  - [Reflog](https://github.com/adebugslife/git-cheatsheet#reflog)
+  - [Git Help](https://github.com/simplifyjs/git-cheatsheet#git-help)
+  - [Git Configuration](https://github.com/simplifyjs/git-cheatsheet#git-configuration)
+  - [Excluding Files](https://github.com/simplifyjs/git-cheatsheet#excluding-files)
+  - [Starting Repository and Staging (Local)](https://github.com/simplifyjs/git-cheatsheet#starting-repository-and-staging-local)
+  - [Remove Untracked File and Delete from File System](https://github.com/simplifyjs/git-cheatsheet#remove-untracked-file-and-delete-from-file-system)
+  - [Add to Staging](https://github.com/simplifyjs/git-cheatsheet#add-to-staging)
+  - [Commit](https://github.com/simplifyjs/git-cheatsheet#commit)
+  - [Stash](https://github.com/simplifyjs/git-cheatsheet#stash)
+  - [Remote](https://github.com/simplifyjs/git-cheatsheet#remote)
+  - [Git Log](https://github.com/simplifyjs/git-cheatsheet#git-log)
+  - [Git Diff](https://github.com/simplifyjs/git-cheatsheet#git-diff)
+  - [Blame](https://github.com/simplifyjs/git-cheatsheet#blame)
+  - [Branching Out](https://github.com/simplifyjs/git-cheatsheet#branching-out)
+  - [Collaboration](https://github.com/simplifyjs/git-cheatsheet#collaboration)
+  - [Tagging](https://github.com/simplifyjs/git-cheatsheet#tagging)
+  - [Rebase](https://github.com/simplifyjs/git-cheatsheet#rebase)
+  - [Interactive Rebase](https://github.com/simplifyjs/git-cheatsheet#interactive-rebase)
+  - [Purging History](https://github.com/simplifyjs/git-cheatsheet#purging-history)
+  - [Index Filter](https://github.com/simplifyjs/git-cheatsheet#index-filter)
+  - [Prune empty commits](https://github.com/simplifyjs/git-cheatsheet#prune-empty-commits)
+  - [Line Endings](https://github.com/simplifyjs/git-cheatsheet#prune-empty-commits)
+  - [Git attribute file](https://github.com/simplifyjs/git-cheatsheet#git-attribute-file)
+  - [Cherry-Pick](https://github.com/simplifyjs/git-cheatsheet#git-attribute-file)
+  - [Submodules](https://github.com/simplifyjs/git-cheatsheet#submodules)
+  - [Cloning Projects](https://github.com/simplifyjs/git-cheatsheet#cloning-projects)
+  - [Reflog](https://github.com/simplifyjs/git-cheatsheet#reflog)
   
 
 
@@ -199,7 +200,7 @@ More Info: [Git Clean]
 | `$ git stash` | Temporary save codes |
 | `$ git stash save "Message"` | Temporary save - Codes and add custom message |
 | `$ git stash save -u` | Temporary save - Untracked files |
-| `git stash branch <NAME> stash@{NUMBER}` | Create new branch with latest stash |
+| `$ git stash branch <NAME> stash@{NUMBER}` | Create new branch with latest stash |
 | `$ git stash create` | Create an unreferenced commit, but it won't actually clear the local changes |
 | `$ git stash show` | Summary of diffs |
 | `$ git stash list` | List all stash |
@@ -609,7 +610,7 @@ See [GIT](http://git-scm.com)
 
 ## Author
 
-* **Ann G.** ⊂(・﹏・⊂) [Adebugslife](http://adebugslife.com)
+* **Ann G.** ⊂(・﹏・⊂) [Simplify JS](http://simplifyjs.com)
 
 
 License
