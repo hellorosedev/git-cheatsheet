@@ -602,6 +602,15 @@ You cannot retrieve deleted branch but not
 ```sh
 $ git log --walk-reflogs // detailed full log
 ```
+## Angular 7+ as Github pages
+1. `git init`
+2. `git add .`
+3. `git commit -m "first commit`
+4. `npm install -g angular-cli-ghpages`
+5. `ng build --prod --base-href https://[username].github.io/[repo]/`
+6. `ngh --dir=dist/[project-name]`
+7. `git remote add origin https://github.com/simplifyjs/test.git`
+8. `git push -u origin master`
 
 #### Reference
 
