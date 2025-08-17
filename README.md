@@ -619,7 +619,7 @@ See [GIT](http://git-scm.com)
 
 ## Author
 
-* **Ann G.** ⊂(・﹏・⊂) [Simplify JS](http://simplifyjs.com)
+* **RoseCode** ⊂(・﹏・⊂)
 
 
 License
